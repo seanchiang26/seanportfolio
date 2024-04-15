@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
     def home
-      render inertia: 'App'
+      render inertia: 'Homepage'
     end
   end
