@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -10,11 +10,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Manrope', ...defaultTheme.fontFamily.sans],
+        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
       },
     },
   },
-//   corePlugins: { preflight: false, },
-  plugins: [
-  ],
-}
+  corePlugins: { preflight: false },
+  plugins: [],
+};

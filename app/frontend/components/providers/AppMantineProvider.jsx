@@ -1,13 +1,9 @@
-import { createTheme, MantineProvider } from '@mantine/core';
+import { createTheme, MantineProvider } from "@mantine/core";
 
 const theme = createTheme({
-    fontFamily: 'Manrope, sans-serif',
+  fontFamily: "Manrope, sans-serif",
 });
 
 export function AppMantineProvider({ children }) {
-    return (
-        <MantineProvider theme={theme}>
-            {children}
-        </MantineProvider>
-    );
+  return <MantineProvider theme={theme}>{children}</MantineProvider>;
 }

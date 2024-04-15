@@ -1,9 +1,5 @@
 import { AppMantineProvider } from "./AppMantineProvider";
 
 export function AppWrapper({ children }) {
-    return (
-        <AppMantineProvider>
-            {children}
-        </AppMantineProvider>
-    );
+  return <AppMantineProvider>{children}</AppMantineProvider>;
 }
