@@ -1,13 +1,21 @@
-// import { Link } from "@inertiajs/react";
+import { AppShell } from "@mantine/core";
+import { Header } from "../components/header/Header";
+import { Footer } from "../components/footer/Footer";
 
-const Layout = ({ children }) => (
-  <>
-    <div className="min-h-full">
-      <nav className=""></nav>
+const Layout = ({ children }) => {
+  return (
+    <AppShell header={{ height: 60 }} footer={{ height: 60 }} padding="md">
+      <AppShell.Header>
+        <Header />
+      </AppShell.Header>
 
-      <div>{children}</div>
-    </div>
-  </>
-);
+      <AppShell.Footer>
+        <Footer />
+      </AppShell.Footer>
+
+      <AppShell.Main>{children}</AppShell.Main>
+    </AppShell>
+  );
+};
 
 export default page => <Layout>{page}</Layout>;

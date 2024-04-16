@@ -1,9 +1,11 @@
+import { ContactForm } from "../components/contact/ContactForm";
+import { HomeBanner } from "../components/homepage/HomeBanner";
+
 export default function Homepage() {
   return (
     <>
-      <h1>hello there</h1>
-
-      <div className="my-3">This is a minimal app page.</div>
+      <HomeBanner />
+      <ContactForm />
     </>
   );
 }

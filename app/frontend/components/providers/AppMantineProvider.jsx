@@ -1,6 +1,7 @@
 import { createTheme, MantineProvider } from "@mantine/core";
 
 const theme = createTheme({
+  primaryColor: "cyan",
   fontFamily: "Manrope, sans-serif",
 });
 
