@@ -18,6 +18,9 @@ gem "jbuilder"
 gem "inertia_rails"
 gem "vite_rails"
 
+# OJ to improve JSON generation
+gem "oj"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

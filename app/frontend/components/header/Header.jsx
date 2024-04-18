@@ -25,7 +25,12 @@ export function Header() {
     useDisclosure(false);
 
   const items = links.map(link => (
-    <Link key={link.label} href={link.link} className={classes.link}>
+    <Link
+      key={link.label}
+      href={link.link}
+      className={classes.link}
+      onClick={toggleDrawer}
+    >
       {link.label}
     </Link>
   ));
@@ -35,7 +40,7 @@ export function Header() {
       <Container className={classes.header}>
         <Group justify="space-between" h="100%">
           <Link href={"/"}>
-            <Image h={30} src="images/emojiicon.svg" />
+            <Image h={30} src="/images/emojiicon.svg" />
           </Link>
 
           <Group h="100%" gap={0} visibleFrom="sm">
