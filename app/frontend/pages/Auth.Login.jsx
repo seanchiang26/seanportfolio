@@ -1,4 +1,10 @@
-import { Container, TextInput, Group, Button } from "@mantine/core";
+import {
+  Container,
+  TextInput,
+  PasswordInput,
+  Group,
+  Button,
+} from "@mantine/core";
 import { useForm } from "@inertiajs/react";
 
 export default function AuthLogin() {
@@ -22,7 +28,6 @@ export default function AuthLogin() {
 
   return (
     <Container size="md">
-      yup
       <form onSubmit={submit}>
         <TextInput
           label="email"
@@ -34,12 +39,13 @@ export default function AuthLogin() {
         />
         {form.errors.email && <div>{form.errors.email}</div>}
 
-        <TextInput
+        <PasswordInput
           label="password"
           placeholder="your password"
           name="password"
           variant="filled"
           value={form.data.password}
+          error={form.errors.password}
           onChange={e => form.setData("password", e.target.value)}
         />
         {form.errors.password && <div>{form.errors.password}</div>}
