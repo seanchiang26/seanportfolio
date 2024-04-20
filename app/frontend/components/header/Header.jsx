@@ -1,6 +1,7 @@
 import {
   Group,
   Divider,
+  Button,
   Box,
   Container,
   Image,
@@ -10,7 +11,7 @@ import {
   rem,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Link } from "@inertiajs/react";
+import { Link, usePage, router } from "@inertiajs/react";
 import classes from "./Header.module.css";
 
 const links = [
@@ -21,6 +22,7 @@ const links = [
 ];
 
 export function Header() {
+  const { auth } = usePage().props;
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
@@ -45,6 +47,17 @@ export function Header() {
 
           <Group h="100%" gap={0} visibleFrom="sm">
             {items}
+            {auth ? (
+              <Button
+                onClick={() => {
+                  router.delete("/logout");
+                }}
+              >
+                Logout
+              </Button>
+            ) : (
+              <></>
+            )}
           </Group>
 
           <Burger
