@@ -1,8 +1,6 @@
 class ProjectsController < ApplicationController
-  include Auth
-
-  before_action :set_project, only: %i[ show edit update destroy ]
-  skip_before_action :authenticate_user!, only: %i[ index show ]
+  before_action :set_project, only: %i[ edit update destroy ]
+  after_action :verify_authorized, except: %i[ index show ]
 
   # GET /projects or /projects.json
   def index
@@ -16,6 +14,8 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
+    @project = Project.find(params[:id])
+
     render inertia: 'Projects.Show', props: {
       project: @project.as_json(
         only: [:id, :title, :body]
@@ -40,6 +40,7 @@ class ProjectsController < ApplicationController
   # POST /projects or /projects.json
   def create
     project = Project.new(project_params)
+    authorize project
 
     if project.save
       redirect_to project_path(project), notice: 'Project created.'
@@ -70,6 +71,10 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+
+      authorize @project
+      rescue ActiveRecord::RecordNotFound
+      redirect_to projects_path
     end
 
     # Only allow a list of trusted parameters through.
