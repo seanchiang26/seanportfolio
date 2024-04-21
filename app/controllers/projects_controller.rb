@@ -25,6 +25,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
+    authorize Project.new(project_params)
     render inertia: 'Projects.New'
   end
 

@@ -1,6 +1,7 @@
 import { AppShell } from "@mantine/core";
 import { Header } from "../components/header/Header";
 import { Footer } from "../components/footer/Footer";
+import { FlashMessages } from "../components/flashmessages/FlashMessages";
 
 const Layout = ({ children }) => {
   return (
@@ -13,7 +14,10 @@ const Layout = ({ children }) => {
         <Footer />
       </AppShell.Footer>
 
-      <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Main>
+        <FlashMessages />
+        {children}
+      </AppShell.Main>
     </AppShell>
   );
 };

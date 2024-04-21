@@ -8,7 +8,7 @@ export default function ProjectsShow({ project }) {
     <Container size="md">
       <h1>{project.title}</h1>
       <p>{project.body}</p>
-      {auth ? (
+      {auth.role == "admin" ? (
         <Stack>
           <Link href={`/projects/${project.id}/edit`}>Edit</Link>
           <div>

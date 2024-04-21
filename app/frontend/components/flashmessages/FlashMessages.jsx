@@ -1,4 +1,4 @@
-import { Alert } from "@mantine/core";
+import { Container, Alert } from "@mantine/core";
 import { IconInfoCircle } from "@tabler/icons-react";
 import { usePage } from "@inertiajs/react";
 
@@ -33,14 +33,16 @@ export function FlashMessages() {
     }
 
     return (
-      <Alert
-        variant="light"
-        color={color}
-        title={title}
-        icon={<IconInfoCircle />}
-      >
-        {msg}
-      </Alert>
+      <Container size="md">
+        <Alert
+          variant="light"
+          color={color}
+          title={title}
+          icon={<IconInfoCircle />}
+        >
+          {msg}
+        </Alert>
+      </Container>
     );
   }
 }

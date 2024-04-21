@@ -6,7 +6,6 @@ import {
   Button,
 } from "@mantine/core";
 import { useForm } from "@inertiajs/react";
-import { FlashMessages } from "../components/flashmessages/FlashMessages";
 
 export default function AuthLogin() {
   const form = useForm({
@@ -29,7 +28,6 @@ export default function AuthLogin() {
 
   return (
     <Container size="md">
-      <FlashMessages />
       <form onSubmit={submit}>
         <TextInput
           label="email"

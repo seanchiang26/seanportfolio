@@ -8,7 +8,8 @@ class ApplicationController < ActionController::Base
   inertia_share auth: -> {
     if user_signed_in?
       {
-        user: current_user.email
+        email: current_user.email,
+        role: current_user.role,
       }
     end
   }

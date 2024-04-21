@@ -49,6 +49,7 @@ export function Header() {
             {items}
             {auth ? (
               <Button
+                ml="sm"
                 onClick={() => {
                   router.delete("/logout");
                 }}
