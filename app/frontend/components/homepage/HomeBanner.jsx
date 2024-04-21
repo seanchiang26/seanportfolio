@@ -9,6 +9,7 @@ import {
   rem,
 } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
+import { Link } from "@inertiajs/react";
 import classes from "./HomeBanner.module.css";
 
 export function HomeBanner() {
@@ -37,29 +38,33 @@ export function HomeBanner() {
             }
           >
             <List.Item>
-              <b>Welcome to my website!</b> – I built this to learn Ruby on
-              Rails and have a place to put the stuff I've worked on
+              <b>welcome to my website!</b> – i built this to learn ruby on
+              rails and have a place to put the stuff i've worked on
             </List.Item>
             <List.Item>
-              <b>Who am I?</b> – I'm a software developer who's experienced with
+              <b>who am i?</b> – i'm a software developer who's experienced with
               bringing start ups from zero to one
             </List.Item>
             <List.Item>
-              <b>What's new?</b> – I'm looking for new opportunities!
+              <b>whats new?</b> – i'm looking for new opportunities!
             </List.Item>
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
-              Learn more
-            </Button>
+            <Link href="/contact">
+              <Button radius="xl" size="md" className={classes.control}>
+                contact me
+              </Button>
+            </Link>
             <Button
+              component="a"
+              href="https://github.com/seanchiang26/seanportfolio"
               variant="default"
               radius="xl"
               size="md"
               className={classes.control}
             >
-              Contact me
+              source code
             </Button>
           </Group>
         </div>
