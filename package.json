@@ -23,11 +23,13 @@
     "vite-plugin-ruby": "^5.0.0"
   },
   "dependencies": {
+    "@mantine/carousel": "^7.8.0",
     "@mantine/core": "^7.8.0",
     "@mantine/form": "^7.8.0",
     "@mantine/hooks": "^7.8.0",
     "@mantine/notifications": "^7.8.0",
-    "@tabler/icons-react": "^3.2.0"
+    "@tabler/icons-react": "^3.2.0",
+    "embla-carousel-react": "^7.1.0"
   },
   "scripts": {
     "prepare": "husky"
