@@ -10,7 +10,7 @@ export default function ProjectsIndex({ projects }) {
         {projects.map(project => {
           return <Link href={`/projects/${project.id}`}>{project.title}</Link>;
         })}
-        {auth.role == "admin" ? (
+        {auth && auth.role == "admin" ? (
           <Link href="/projects/new">
             <Button>New</Button>
           </Link>
