@@ -5,14 +5,10 @@ import { Footer } from "../components/footer/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <AppShell header={{ height: 60 }} footer={{ height: 60 }} padding="md">
+    <AppShell header={{ height: 60 }} padding="md">
       <AppShell.Header>
         <Header />
       </AppShell.Header>
-
-      <AppShell.Footer>
-        <Footer />
-      </AppShell.Footer>
 
       <AppShell.Main>
         <FlashMessages />
