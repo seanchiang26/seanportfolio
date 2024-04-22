@@ -15,9 +15,9 @@ import { Link, usePage, router } from "@inertiajs/react";
 import classes from "./Header.module.css";
 
 const links = [
-  { link: "/", label: "Home" },
-  { link: "/projects", label: "Projects" },
-  { link: "/#contact", label: "Contact" },
+  { link: "/", label: "home" },
+  { link: "/projects", label: "projects" },
+  { link: "/#contact", label: "contact" },
 ];
 
 export function Header() {
