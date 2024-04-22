@@ -7,14 +7,14 @@ class ProjectsController < ApplicationController
     projects = Project.all
     render inertia: 'Projects.Index', props: {
       projects: projects.as_json(
-        only: [:id, :title]
+        only: [:slug, :title]
       )
     }
   end
 
   # GET /projects/1 or /projects/1.json
   def show
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
 
     render inertia: 'Projects.Show', props: {
       project: @project.as_json(
@@ -71,7 +71,7 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.friendly.find(params[:id])
 
       authorize @project
       rescue ActiveRecord::RecordNotFound

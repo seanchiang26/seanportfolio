@@ -6,7 +6,6 @@ export function ProjectCard({ project }) {
   const image =
     "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
 
-  console.log(project);
   return (
     <Card
       radius="md"
@@ -24,7 +23,7 @@ export function ProjectCard({ project }) {
           description
         </Text>
 
-        <Link href={`/projects/${project.id}`}>
+        <Link href={`/projects/${project.slug}`}>
           <Button
             className={classes.action}
             variant="white"

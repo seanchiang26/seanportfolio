@@ -12,7 +12,7 @@ export default function ProjectsIndex({ projects }) {
       </Title>
       <Stack mt="lg">
         {projects.map(project => {
-          return <ProjectCard key={project.id} project={project} />;
+          return <ProjectCard key={project.slug} project={project} />;
         })}
         {auth && auth.role == "admin" ? (
           <Link href="/projects/new">

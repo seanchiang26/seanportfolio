@@ -21,6 +21,9 @@ gem "vite_rails"
 # OJ to improve JSON generation
 gem "oj"
 
+# Friendly ID for slugged URLs
+gem 'friendly_id', '~> 5.5.0'
+
 # Authentication gems
 gem "devise"
 gem "doorkeeper"
