@@ -1,7 +1,7 @@
 import { AppShell } from "@mantine/core";
 import { Header } from "../components/header/Header";
-import { Footer } from "../components/footer/Footer";
 import { FlashMessages } from "../components/flashmessages/FlashMessages";
+import { Footer } from "../components/footer/Footer";
 
 const Layout = ({ children }) => {
   return (

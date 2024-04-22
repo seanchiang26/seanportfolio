@@ -21,7 +21,7 @@ export function HomeBanner() {
             hi, i'm <span className={classes.highlight}>sean</span>
           </Title>
           <Text c="dimmed" mt="md">
-            i like building cool stuff that i find interesting
+            i like building cool things
           </Text>
 
           <List
@@ -51,7 +51,7 @@ export function HomeBanner() {
           </List>
 
           <Group mt={30}>
-            <Link href="/contact">
+            <Link href="/#contact">
               <Button radius="xl" size="md" className={classes.control}>
                 contact me
               </Button>

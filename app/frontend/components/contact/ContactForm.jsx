@@ -24,7 +24,7 @@ export function ContactForm() {
   });
 
   return (
-    <Container size="md">
+    <Container id="contact" size="md">
       <form onSubmit={form.onSubmit(() => {})}>
         <Title order={2} size="h1" fw={900} ta="center">
           leave me a message
@@ -32,15 +32,15 @@ export function ContactForm() {
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
           <TextInput
-            label="Name"
-            placeholder="Your name"
+            label="name"
+            placeholder="your name"
             name="name"
             variant="filled"
             {...form.getInputProps("name")}
           />
           <TextInput
-            label="Email"
-            placeholder="Your email"
+            label="email"
+            placeholder="your@email.com"
             name="email"
             variant="filled"
             {...form.getInputProps("email")}
@@ -49,8 +49,8 @@ export function ContactForm() {
 
         <Textarea
           mt="md"
-          label="Message"
-          placeholder="Your message"
+          label="message"
+          placeholder="your message"
           maxRows={10}
           minRows={5}
           autosize

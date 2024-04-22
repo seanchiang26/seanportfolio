@@ -1,5 +1,6 @@
-import { Container, Group, ActionIcon, rem } from "@mantine/core";
+import { Container, Group, ActionIcon, Tooltip, rem } from "@mantine/core";
 import {
+  IconMail,
   IconBrandGithub,
   IconBrandSpotify,
   IconBrandLinkedin,
@@ -12,38 +13,56 @@ export function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Group gap="sm" justify="flex-end" wrap="nowrap">
+        <Group justify="center" gap="sm">
+          <a href="mailto:schiang226@gmail.com">
+            <Tooltip label="Email">
+              <ActionIcon size="lg" color="gray" variant="subtle">
+                <IconMail
+                  style={{ width: rem(18), height: rem(18) }}
+                  stroke={1.5}
+                />
+              </ActionIcon>
+            </Tooltip>
+          </a>
           <a href="https://github.com/seanchiang26">
-            <ActionIcon size="lg" color="gray" variant="subtle">
-              <IconBrandGithub
-                style={{ width: rem(18), height: rem(18) }}
-                stroke={1.5}
-              />
-            </ActionIcon>
+            <Tooltip label="Github">
+              <ActionIcon size="lg" color="gray" variant="subtle">
+                <IconBrandGithub
+                  style={{ width: rem(18), height: rem(18) }}
+                  stroke={1.5}
+                />
+              </ActionIcon>
+            </Tooltip>
           </a>
           <a href="https://www.linkedin.com/in/seanchiang26/">
-            <ActionIcon size="lg" color="gray" variant="subtle">
-              <IconBrandLinkedin
-                style={{ width: rem(18), height: rem(18) }}
-                stroke={1.5}
-              />
-            </ActionIcon>
+            <Tooltip label="Linkedin">
+              <ActionIcon size="lg" color="gray" variant="subtle">
+                <IconBrandLinkedin
+                  style={{ width: rem(18), height: rem(18) }}
+                  stroke={1.5}
+                />
+              </ActionIcon>
+            </Tooltip>
           </a>
           <a href="https://open.spotify.com/user/candycanehappy">
-            <ActionIcon size="lg" color="gray" variant="subtle">
-              <IconBrandSpotify
-                style={{ width: rem(18), height: rem(18) }}
-                stroke={1.5}
-              />
-            </ActionIcon>
+            <Tooltip label="Spotify">
+              <ActionIcon size="lg" color="gray" variant="subtle">
+                <IconBrandSpotify
+                  style={{ width: rem(18), height: rem(18) }}
+                  stroke={1.5}
+                />
+              </ActionIcon>
+            </Tooltip>
           </a>
           <a href="https://www.instagram.com/sean.chiang/">
-            <ActionIcon size="lg" color="gray" variant="subtle">
-              <IconBrandInstagram
-                style={{ width: rem(18), height: rem(18) }}
-                stroke={1.5}
-              />
-            </ActionIcon>
+            <Tooltip label="Instagram">
+              <ActionIcon size="lg" color="gray" variant="subtle">
+                <IconBrandInstagram
+                  style={{ width: rem(18), height: rem(18) }}
+                  stroke={1.5}
+                />
+              </ActionIcon>
+            </Tooltip>
           </a>
         </Group>
       </Container>

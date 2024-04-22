@@ -16,7 +16,7 @@ export function ProjectsCard({ image, title }) {
         </Title>
       </div>
       <Button variant="white" color="dark">
-        Read more
+        learn more
       </Button>
     </Paper>
   );
