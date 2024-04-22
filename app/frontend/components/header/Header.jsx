@@ -31,7 +31,7 @@ export function Header() {
       key={link.label}
       href={link.link}
       className={classes.link}
-      onClick={toggleDrawer}
+      onClick={closeDrawer}
     >
       {link.label}
     </Link>
