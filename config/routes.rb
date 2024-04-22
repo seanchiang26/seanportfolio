@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   resources :projects
 
+  get '/resume', to: 'static#resume'
+  get '/contact', to: 'static#contact'
+
   draw :api
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
