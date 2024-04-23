@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :projects
+  resources :messages
 
   draw :api
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
