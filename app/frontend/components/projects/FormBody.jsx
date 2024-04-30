@@ -1,20 +1,31 @@
-import { TextInput, Textarea, Group, Button } from "@mantine/core";
+import {
+  TextInput,
+  Textarea,
+  Group,
+  Button,
+  MultiSelect,
+  Stack,
+} from "@mantine/core";
+import {
+  tags_projects_backend,
+  tags_projects_frontend,
+  tags_projects_fullstack,
+} from "@/helpers/Tags";
 
-export default function FormBody(form) {
+export default function FormBody({ form }) {
   return (
-    <>
+    <Stack gap="md">
       <TextInput
         label="title"
         placeholder="your title"
         name="title"
         variant="filled"
-        value={form.form.data.title}
-        onChange={e => form.form.setData("title", e.target.value)}
+        errors={form.errors.title}
+        value={form.data.title}
+        onChange={e => form.setData("title", e.target.value)}
       />
-      {form.form.errors.title && <div>{form.form.errors.title}</div>}
 
       <Textarea
-        mt="md"
         label="body"
         placeholder="your body"
         maxRows={10}
@@ -22,16 +33,29 @@ export default function FormBody(form) {
         autosize
         name="message"
         variant="filled"
-        value={form.form.data.body}
-        onChange={e => form.form.setData("body", e.target.value)}
+        errors={form.errors.body}
+        value={form.data.body}
+        onChange={e => form.setData("body", e.target.value)}
       />
-      {form.form.errors.body && <div>{form.form.errors.body}</div>}
+
+      <MultiSelect
+        label="tags"
+        variant="filled"
+        placeholder="pick some tags"
+        data={[
+          { group: "fullstack", items: tags_projects_fullstack },
+          { group: "frontend", items: tags_projects_frontend },
+          { group: "backend", items: tags_projects_backend },
+        ]}
+        value={form.data.tag_list}
+        onChange={e => form.setData("tag_list", e)}
+      />
 
       <Group justify="center" mt="xl">
         <Button type="submit" size="md">
           submit
         </Button>
       </Group>
-    </>
+    </Stack>
   );
 }

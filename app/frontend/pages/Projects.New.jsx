@@ -6,6 +6,7 @@ export default function ProjectsEdit() {
   const form = useForm({
     title: "",
     body: "",
+    tag_list: [],
   });
 
   function submit(e) {

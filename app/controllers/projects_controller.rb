@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
     projects = Project.all
     render inertia: 'Projects.Index', props: {
       projects: projects.as_json(
-        only: [:slug, :title]
+        only: [:slug, :title, :tag_list]
       )
     }
   end
@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
 
     render inertia: 'Projects.Show', props: {
       project: @project.as_json(
-        only: [:id, :title, :body]
+        # only: [:id, :title, :body]
       )
     }
   end
@@ -33,7 +33,7 @@ class ProjectsController < ApplicationController
   def edit
     render inertia: 'Projects.Edit', props: {
       project: @project.as_json(
-        only: [:id, :title, :body]
+        # only: [:id, :title, :body]
       )
     }
   end
