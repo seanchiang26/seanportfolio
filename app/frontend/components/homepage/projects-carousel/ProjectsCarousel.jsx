@@ -18,7 +18,7 @@ export function ProjectsCarousel() {
   return (
     <Container size="md">
       <Title order={2} size="h1" fw={900} ta="center">
-        some things i've done
+        some things i've built
       </Title>
       <Carousel
         slideSize={{ base: "100%", sm: "50%" }}
