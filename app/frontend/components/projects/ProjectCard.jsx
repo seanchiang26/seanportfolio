@@ -1,4 +1,4 @@
-import { Card, Button, Overlay, Text } from "@mantine/core";
+import { Card, Button, Overlay, Text, Pill, Group } from "@mantine/core";
 import { Link } from "@inertiajs/react";
 import classes from "./ProjectCard.module.css";
 
@@ -15,13 +15,15 @@ export function ProjectCard({ project }) {
       <Overlay className={classes.overlay} opacity={0.55} zIndex={0} />
 
       <div className={classes.content}>
-        <Text size="lg" fw={700} className={classes.title}>
+        <Text size="lg" mb="sm" fw={700} className={classes.title}>
           {project.title}
         </Text>
 
-        <Text size="sm" className={classes.description}>
-          description
-        </Text>
+        <Group size="sm" className={classes.description}>
+          {project.tag_list.map(tag => (
+            <Pill key={project.id + tag}>{tag}</Pill>
+          ))}
+        </Group>
 
         <Link href={`/projects/${project.slug}`}>
           <Button
