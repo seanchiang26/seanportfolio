@@ -8,18 +8,21 @@ import {
   Pill,
   SimpleGrid,
   Image,
-  Paper,
 } from "@mantine/core";
-import { router, Link, usePage } from "@inertiajs/react";
+import { IconLink } from "@tabler/icons-react";
 
 export default function ProjectsShow({ project }) {
-  const { auth } = usePage().props;
-
   return (
     <Container size="md" py="xl">
       <Stack gap="lg">
-        <Title order={2}>{project.title}</Title>
-        <Title order={4}>{project.one_liner}</Title>
+        <Title order={1}>{project.title}</Title>
+        <Title order={3}>{project.one_liner}</Title>
+        {project.url ? (
+          <Group gap="xs">
+            <IconLink size={20} />
+            <a href={project.url}>{project.url}</a>
+          </Group>
+        ) : null}
         <Group>
           {project.tag_list.map(tag => (
             <Pill key={project.id + tag}>{tag}</Pill>

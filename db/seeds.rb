@@ -27,6 +27,7 @@ end
 Project.where(title: "Die-Hard").first_or_create do |project|
   project.title = "Die-Hard"
   project.one_liner = "Turn your one-time listeners into diehard fans"
+  project.url = "https://www.die-hard.io/"
   project.body = "Descriptive text"
   project.tag_list = ["Next.js", "React", "Typescript", "Supabase"]
 end
@@ -35,6 +36,7 @@ end
 Project.where(title: "Brickhouse").first_or_create do |project|
   project.title = "Brickhouse"
   project.one_liner = "Discover the most unique live music spots in your city. Personalized for you."
+  project.url = "https://www.brickhouse.club/"
   project.body = "Descriptive text"
   project.tag_list = ["Ruby on Rails", "React", "Typescript"]
 end
