@@ -4,7 +4,7 @@ class StaticController < ApplicationController
 
       render inertia: 'Homepage', props: {
       projects: projects.as_json(
-        only: [:slug, :title, :one_liner]
+        only: [:slug, :title, :one_liner, :image_url]
       )
     }
     end

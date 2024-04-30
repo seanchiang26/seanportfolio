@@ -20,6 +20,7 @@ Project.where(title: "Ping Communications").first_or_create do |project|
   project.title = "Ping Communications"
   project.one_liner = "Supercharge your event communications"
   project.body = "Descriptive text"
+  project.image_url = "/images/ping_ss.png"
   project.tag_list = ["Flutter", "Firebase"]
 end
 
@@ -29,6 +30,7 @@ Project.where(title: "Die-Hard").first_or_create do |project|
   project.one_liner = "Turn your one-time listeners into diehard fans"
   project.url = "https://www.die-hard.io/"
   project.body = "Descriptive text"
+  project.image_url = "/images/diehard_ss.png"
   project.tag_list = ["Next.js", "React", "Typescript", "Supabase"]
 end
 
@@ -38,6 +40,7 @@ Project.where(title: "Brickhouse").first_or_create do |project|
   project.one_liner = "Discover the most unique live music spots in your city. Personalized for you."
   project.url = "https://brickhouse.club/"
   project.body = "Descriptive text"
+  project.image_url = "/images/brickhouse_ss.png"
   project.tag_list = ["Ruby on Rails", "React", "Typescript"]
 end
 
@@ -47,5 +50,6 @@ Project.where(title: "Portfolio Website").first_or_create do |project|
   project.one_liner = "Just my portfolio site, you're on it rn"
   project.url = "https://www.schiang.dev/"
   project.body = "Descriptive text"
+  project.image_url = "/images/portfolio_ss.png"
   project.tag_list = ["Ruby on Rails", "React"]
 end

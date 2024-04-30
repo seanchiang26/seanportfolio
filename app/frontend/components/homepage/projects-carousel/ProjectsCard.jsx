@@ -2,14 +2,14 @@ import { Card, Title, Button, Text, Overlay } from "@mantine/core";
 import { Link } from "@inertiajs/react";
 import classes from "./ProjectsCarousel.module.css";
 
-export function ProjectsCard({ title, one_liner, slug }) {
+export function ProjectsCard({ title, one_liner, slug, image_url }) {
   return (
     <Card
       shadow="md"
       radius="md"
       p="xl"
       style={{
-        backgroundImage: `url("/images/diehard_ss.png")`,
+        backgroundImage: `url(${image_url})`,
       }}
       className={classes.card}
     >

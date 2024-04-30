@@ -9,7 +9,7 @@ export function ProjectCard({ project }) {
     <Card
       radius="md"
       className={classes.card}
-      style={{ backgroundImage: `url(${image})` }}
+      style={{ backgroundImage: `url(${project.image_url})` }}
     >
       <Overlay className={classes.overlay} opacity={0.55} zIndex={0} />
 

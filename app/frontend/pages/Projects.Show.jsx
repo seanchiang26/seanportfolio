@@ -10,7 +10,7 @@ import {
   Image,
   ActionIcon,
 } from "@mantine/core";
-import { IconExternalLink, IconLink } from "@tabler/icons-react";
+import { IconExternalLink } from "@tabler/icons-react";
 
 export default function ProjectsShow({ project }) {
   return (
@@ -42,13 +42,7 @@ export default function ProjectsShow({ project }) {
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
           <Text>{project.body}</Text>
-          <Image
-            fit="contain"
-            radius="md"
-            src={
-              "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-            }
-          />
+          <Image fit="contain" radius="md" src={project.image_url} />
         </SimpleGrid>
       </Stack>
     </Container>
