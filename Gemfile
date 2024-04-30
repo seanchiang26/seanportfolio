@@ -31,6 +31,9 @@ gem "doorkeeper"
 # Authorization gem
 gem "pundit"
 
+# Tags for projects
+gem 'acts-as-taggable-on'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
