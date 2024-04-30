@@ -14,7 +14,7 @@ export function ProjectsCard({ title, one_liner, slug }) {
       className={classes.card}
     >
       <div>
-        <Title order={3} className={classes.title}>
+        <Title order={2} className={classes.title}>
           {title}
         </Title>
         <Text className={classes.one_liner} size="xs" mt="xs">

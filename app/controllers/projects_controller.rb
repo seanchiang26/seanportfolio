@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
     projects = Project.all
     render inertia: 'Projects.Index', props: {
       projects: projects.as_json(
-        only: [:slug, :title, :tag_list]
+        only: [:slug, :title, :one_liner, :tag_list]
       )
     }
   end

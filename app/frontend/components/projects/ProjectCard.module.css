@@ -1,5 +1,5 @@
 .card {
-  height: rem(240px);
+  height: rem(360px);
   background-size: cover;
   background-position: center;
 }
@@ -19,12 +19,11 @@
 .action {
   position: absolute;
   bottom: var(--mantine-spacing-xl);
-  right: var(--mantine-spacing-xl);
+  left: var(--mantine-spacing-xl);
 }
 
 .description {
   color: var(--mantine-color-white);
-  max-width: rem(300px);
 }
 
 .overlay {
