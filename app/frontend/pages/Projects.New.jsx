@@ -5,6 +5,7 @@ import FormBody from "../components/projects/FormBody";
 export default function ProjectsEdit() {
   const form = useForm({
     title: "",
+    one_liner: "",
     body: "",
     tag_list: [],
   });

@@ -25,6 +25,16 @@ export default function FormBody({ form }) {
         onChange={e => form.setData("title", e.target.value)}
       />
 
+      <TextInput
+        label="one liner"
+        placeholder="your one liner"
+        name="one_liner"
+        variant="filled"
+        errors={form.errors.one_liner}
+        value={form.data.one_liner}
+        onChange={e => form.setData("one_liner", e.target.value)}
+      />
+
       <Textarea
         label="body"
         placeholder="your body"
