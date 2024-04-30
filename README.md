@@ -12,17 +12,17 @@ Built with Ruby on Rails and React
    brew install tmux overmind postgresql rbenv yarn
    ```
 
-   > [!IMPORTANT]  
-   > Our ruby version is `3.3.0`. If you do not have this, do the following setup
-   >
-   > ```sh
-   > # run this and follow the printed instructions
-   > rbenv init
-   >
-   > # then run the following and restart your terminal window
-   > rbenv install 3.3.0
-   > rbenv global 3.3.0
-   > ```
+> [!IMPORTANT]  
+> Our ruby version is `3.3.0`. If you do not have this, do the following setup
+>
+> ```sh
+> # run this and follow the printed instructions
+> rbenv init
+>
+> # then run the following and restart your terminal window
+> rbenv install 3.3.0
+> rbenv global 3.3.0
+> ```
 
 2. Initialize our database
    ```sh
