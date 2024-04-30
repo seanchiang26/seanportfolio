@@ -36,7 +36,7 @@ end
 Project.where(title: "Brickhouse").first_or_create do |project|
   project.title = "Brickhouse"
   project.one_liner = "Discover the most unique live music spots in your city. Personalized for you."
-  project.url = "https://www.brickhouse.club/"
+  project.url = "https://brickhouse.club/"
   project.body = "Descriptive text"
   project.tag_list = ["Ruby on Rails", "React", "Typescript"]
 end

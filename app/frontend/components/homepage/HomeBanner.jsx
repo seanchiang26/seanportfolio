@@ -22,7 +22,7 @@ export function HomeBanner() {
             hi, i'm <span className={classes.highlight}>sean</span>
           </Title>
           <Text c="dimmed" mt="md">
-            i like building cool things
+            i'm a software engineer
           </Text>
 
           <List
@@ -43,8 +43,8 @@ export function HomeBanner() {
               rails and have a place to put the stuff i've worked on
             </List.Item>
             <List.Item>
-              <b>who am i?</b> – i'm a software developer who's experienced with
-              bringing start ups from zero to one
+              <b>a lil about me</b> – i'm a software developer who's experienced
+              with bringing start ups from zero to one
             </List.Item>
             <List.Item>
               <b>whats new?</b> – i'm looking for new opportunities!

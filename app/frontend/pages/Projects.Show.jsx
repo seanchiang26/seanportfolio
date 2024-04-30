@@ -8,22 +8,31 @@ import {
   Pill,
   SimpleGrid,
   Image,
+  ActionIcon,
 } from "@mantine/core";
-import { IconLink } from "@tabler/icons-react";
+import { IconExternalLink, IconLink } from "@tabler/icons-react";
 
 export default function ProjectsShow({ project }) {
   return (
     <Container size="md" py="xl">
       <Stack gap="lg">
-        <Title order={1}>{project.title}</Title>
-        <Title order={3}>{project.one_liner}</Title>
-        {project.url ? (
-          <Group gap="xs">
-            <IconLink size={20} />
-            <a href={project.url}>{project.url}</a>
-          </Group>
-        ) : null}
-        <Group>
+        <Group align="center" justify="center" gap="xs">
+          <Title ta="center" order={1}>
+            {project.title}
+          </Title>
+          {project.url ? (
+            <a href={project.url}>
+              <ActionIcon variant="subtle" size="lg">
+                <IconExternalLink />
+              </ActionIcon>
+            </a>
+          ) : null}
+        </Group>
+        <Title ta="center" order={3}>
+          {project.one_liner}
+        </Title>
+
+        <Group align="center" justify="center">
           {project.tag_list.map(tag => (
             <Pill key={project.id + tag}>{tag}</Pill>
           ))}
