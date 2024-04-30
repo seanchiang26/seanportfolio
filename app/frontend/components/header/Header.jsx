@@ -41,7 +41,7 @@ export function Header() {
       <Container className={classes.header}>
         <Group justify="space-between" h="100%">
           <Link href={"/"}>
-            <Image h={30} src="/images/emojiicon.svg" />
+            <Image h={30} w={30} fit="contain" src="/images/emojiicon.svg" />
           </Link>
 
           <Group h="100%" gap={0} visibleFrom="sm">
