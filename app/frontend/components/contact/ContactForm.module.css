@@ -19,7 +19,7 @@
 }
 
 .description {
-  color: var(--mantine-color-blue-0);
+  color: var(--mantine-color-cyan-0);
   max-width: rem(300px);
 
   @media (max-width: $mantine-breakpoint-sm) {
@@ -38,7 +38,7 @@
   color: var(--mantine-color-white);
 
   @mixin hover {
-    color: var(--mantine-color-blue-1);
+    color: var(--mantine-color-cyan-1);
   }
 }
 
