@@ -1,6 +1,7 @@
 import {
   Container,
   Title,
+  Image,
   Button,
   Group,
   Text,
@@ -68,7 +69,11 @@ export function HomeBanner() {
             </Button>
           </Group>
         </div>
-        <div className={classes.image}>insert image here</div>
+        <Image
+          fit="contain"
+          src={"/images/selfie.png"}
+          className={classes.image}
+        />
       </div>
     </Container>
   );
