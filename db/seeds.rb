@@ -40,3 +40,12 @@ Project.where(title: "Brickhouse").first_or_create do |project|
   project.body = "Descriptive text"
   project.tag_list = ["Ruby on Rails", "React", "Typescript"]
 end
+
+# Project: Portfolio Website
+Project.where(title: "Portfolio Website").first_or_create do |project|
+  project.title = "Portfolio Website"
+  project.one_liner = "Just my portfolio site, you're on it rn"
+  project.url = "https://www.schiang.dev/"
+  project.body = "Descriptive text"
+  project.tag_list = ["Ruby on Rails", "React"]
+end
