@@ -16,7 +16,7 @@ export default function ProjectsShow({ project }) {
   const { auth } = usePage().props;
 
   return (
-    <Container size="md">
+    <Container size="md" py="xl">
       <Stack gap="lg">
         <Title order={2}>{project.title}</Title>
         <Title order={4}>{project.one_liner}</Title>
@@ -26,7 +26,7 @@ export default function ProjectsShow({ project }) {
           ))}
         </Group>
 
-        <Divider />
+        <Divider my="lg" />
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
           <Text>{project.body}</Text>
