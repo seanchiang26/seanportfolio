@@ -15,3 +15,9 @@
   font-size: rem(32px);
   margin-top: var(--mantine-spacing-xs);
 }
+
+.one_liner {
+  color: var(--mantine-color-white);
+  opacity: 0.7;
+  font-weight: 700;
+}

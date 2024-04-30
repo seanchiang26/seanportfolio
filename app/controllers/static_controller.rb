@@ -1,5 +1,11 @@
 class StaticController < ApplicationController
     def home
-      render inertia: 'Homepage'
+      projects = Project.all
+
+      render inertia: 'Homepage', props: {
+      projects: projects.as_json(
+        only: [:slug, :title, :one_liner]
+      )
+    }
     end
   end
