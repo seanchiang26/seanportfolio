@@ -8,7 +8,7 @@ export default function ProjectsIndex({ projects }) {
   return (
     <Container size="md">
       <Title order={2} size="h1" fw={900} ta="center">
-        my professional work
+        my projects
       </Title>
       <Stack mt="lg">
         {projects.map(project => {
