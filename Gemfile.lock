@@ -108,6 +108,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dockerfile-rails (1.6.10)
+      rails (>= 3.0.0)
     doorkeeper (5.6.9)
       railties (>= 5)
     drb (2.2.1)
@@ -273,6 +275,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  dockerfile-rails (>= 1.6)
   doorkeeper
   friendly_id (~> 5.5.0)
   inertia_rails
