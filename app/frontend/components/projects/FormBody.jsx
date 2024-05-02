@@ -45,6 +45,16 @@ export default function FormBody({ form }) {
         onChange={e => form.setData("url", e.target.value)}
       />
 
+      <TextInput
+        label="image_url"
+        placeholder="your image url"
+        name="image_url"
+        variant="filled"
+        errors={form.errors.image_url}
+        value={form.data.image_url}
+        onChange={e => form.setData("image_url", e.target.value)}
+      />
+
       <Textarea
         label="body"
         placeholder="your body"

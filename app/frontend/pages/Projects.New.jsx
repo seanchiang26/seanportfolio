@@ -7,6 +7,7 @@ export default function ProjectsEdit() {
     title: "",
     one_liner: "",
     url: "",
+    image_url: "",
     body: "",
     tag_list: [],
   });
