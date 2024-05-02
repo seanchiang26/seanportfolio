@@ -11,6 +11,8 @@ Rails.application.routes.draw do
           via: Devise.mappings[:user].sign_out_via
   end
 
+  get "/dashboard", to: "admin#dashboard"
+
   resources :projects
 
   draw :api

@@ -14,16 +14,18 @@ import { useDisclosure } from "@mantine/hooks";
 import { Link, usePage, router } from "@inertiajs/react";
 import classes from "./Header.module.css";
 
-const links = [
-  { link: "/", label: "home" },
-  { link: "/projects", label: "projects" },
-  { link: "/#contact", label: "contact" },
-];
-
 export function Header() {
   const { auth } = usePage().props;
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
+
+  const links = [
+    { link: "/", label: "home" },
+    { link: "/projects", label: "projects" },
+    ...(auth && auth.role == "admin"
+      ? [{ link: "/dashboard", label: "dashboard" }]
+      : [{ link: "/#contact", label: "contact" }]),
+  ];
 
   const items = links.map(link => (
     <Link
@@ -46,18 +48,6 @@ export function Header() {
 
           <Group h="100%" gap={0} visibleFrom="sm">
             {items}
-            {auth ? (
-              <Button
-                ml="sm"
-                onClick={() => {
-                  router.delete("/logout");
-                }}
-              >
-                Logout
-              </Button>
-            ) : (
-              <></>
-            )}
           </Group>
 
           <Burger
