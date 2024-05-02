@@ -42,7 +42,7 @@ export default function ProjectsShow({ project }) {
         <Divider my="lg" />
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
-          <Text>{project.body}</Text>
+          <Text style={{ whiteSpace: "pre-line" }}>{project.body}</Text>
           <ImageModal image_url={project.image_url} />
         </SimpleGrid>
       </Stack>
