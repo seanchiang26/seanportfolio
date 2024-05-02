@@ -11,6 +11,7 @@ import {
   ActionIcon,
 } from "@mantine/core";
 import { IconExternalLink } from "@tabler/icons-react";
+import { ImageModal } from "../components/projects/ImageModal";
 
 export default function ProjectsShow({ project }) {
   return (
@@ -42,7 +43,7 @@ export default function ProjectsShow({ project }) {
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
           <Text>{project.body}</Text>
-          <Image fit="contain" radius="md" src={project.image_url} />
+          <ImageModal image_url={project.image_url} />
         </SimpleGrid>
       </Stack>
     </Container>
