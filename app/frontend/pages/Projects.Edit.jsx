@@ -1,5 +1,5 @@
-import { Container } from "@mantine/core";
-import { useForm } from "@inertiajs/react";
+import { Button, Container } from "@mantine/core";
+import { useForm, router } from "@inertiajs/react";
 import FormBody from "../components/projects/FormBody";
 
 export default function ProjectsEdit({ project }) {
@@ -17,11 +17,16 @@ export default function ProjectsEdit({ project }) {
     form.put(`/projects/${project.id}`);
   }
 
+  function deleteProject() {
+    router.delete(`/projects/${project.id}`);
+  }
+
   return (
     <Container size="md">
       <form onSubmit={submit}>
         <FormBody form={form} />
       </form>
+      <Button onClick={deleteProject}>Delete</Button>
     </Container>
   );
 }
