@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Seanportfolio
   class Application < Rails::Application
+    require "inertia_rails_ext"
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 

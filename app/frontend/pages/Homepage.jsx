@@ -1,4 +1,3 @@
-import { Space } from "@mantine/core";
 import { ContactForm } from "../components/contact/ContactForm";
 import { HomeBanner } from "../components/homepage/HomeBanner";
 import { ProjectsCarousel } from "../components/homepage/projects-carousel/ProjectsCarousel";
