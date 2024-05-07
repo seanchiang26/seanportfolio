@@ -10,7 +10,7 @@ import "../stylesheets/main.css";
 
 const pages = import.meta.glob("../pages/*.jsx", { eager: true });
 
-console.log(pages);
+// console.log(pages);
 // const parsePageImports = (
 //   imports
 // ) => {

@@ -4,6 +4,8 @@
 ARG RUBY_VERSION=3.3.0
 FROM ruby:$RUBY_VERSION-slim as base
 
+LABEL fly_launch_runtime="rails"
+
 # Rails app lives here
 WORKDIR /rails
 
@@ -43,12 +45,7 @@ RUN bundle install && \
 # Install node modules
 COPY --link .yarnrc package.json yarn.lock ./
 COPY --link .yarn/releases/* .yarn/releases/
-RUN yarn install --frozen-lockfile
-
-# Install Overmind
-RUN curl -Lo /usr/bin/overmind.gz https://github.com/DarthSim/overmind/releases/download/v2.4.0/overmind-v2.4.0-linux-amd64.gz \
-  && gzip -d /usr/bin/overmind.gz \
-  && chmod u+x /usr/bin/overmind
+RUN yarn install --frozen-lockfile && yarn cache clean
 
 # Copy application code
 COPY --link . .
@@ -65,7 +62,7 @@ FROM base
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl postgresql-client && \
+    apt-get install --no-install-recommends -y node-gyp curl postgresql-client ruby-foreman && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built artifacts: gems, application
@@ -78,10 +75,9 @@ RUN groupadd --system --gid 1000 rails && \
     chown -R 1000:1000 db log storage tmp
 USER 1000:1000
 
-# Entrypoint prepares the database.
+# Entrypoint sets up the container.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD ["foreman", "start"]
-# CMD ["./bin/rails", "server"]
+CMD ["foreman", "start", "--procfile=Procfile"]

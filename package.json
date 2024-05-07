@@ -34,7 +34,7 @@
   },
   "scripts": {
     "prepare": "husky",
-    "build": "vite build --outDir public"
+    "build": "vite build --outDir public && vite build --ssr --outDir public/ssr"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
