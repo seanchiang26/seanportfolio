@@ -1,7 +1,10 @@
 {
   "all": {
     "sourceCodeDir": "app/frontend",
-    "watchAdditionalPaths": []
+    "watchAdditionalPaths": [],
+    "ssrBuildEnabled": true,
+    "ssrEntrypoint": "app/frontend/ssr/ssr.{js,jsx,ts,tsx}",
+    "ssrOutputDir": "app/frontend/ssr/dist"
   },
   "development": {
     "autoBuild": true,

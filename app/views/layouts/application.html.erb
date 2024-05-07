@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-mantine-color-scheme="light">
   <head>
     <title>Sean Chiang</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= favicon_link_tag asset_path('/images/favicon.png') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= inertia_headers %>
+    <%= inertia_assets media: nil %>
 
     <%= vite_client_tag %>
     <%= vite_react_refresh_tag %>

@@ -45,6 +45,11 @@ COPY --link .yarnrc package.json yarn.lock ./
 COPY --link .yarn/releases/* .yarn/releases/
 RUN yarn install --frozen-lockfile
 
+# Install Overmind
+RUN curl -Lo /usr/bin/overmind.gz https://github.com/DarthSim/overmind/releases/download/v2.4.0/overmind-v2.4.0-linux-amd64.gz \
+  && gzip -d /usr/bin/overmind.gz \
+  && chmod u+x /usr/bin/overmind
+
 # Copy application code
 COPY --link . .
 
@@ -78,4 +83,5 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD ["./bin/rails", "server"]
+CMD ["foreman", "start"]
+# CMD ["./bin/rails", "server"]
